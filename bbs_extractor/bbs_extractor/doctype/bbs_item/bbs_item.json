@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-24 15:48:55.128728",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_group",
+  "member",
+  "bar_mark",
+  "bar_size",
+  "no_of_members",
+  "no_of_bars_each",
+  "total_no",
+  "length_mm",
+  "length_m",
+  "bar_spacing_mm",
+  "shape_code",
+  "dim_a_mm",
+  "dim_b_mm",
+  "dim_c_mm",
+  "dim_d_mm",
+  "dim_e_r_mm",
+  "weight_kg",
+  "weight_source",
+  "mapped_product_name",
+  "mapped_product_code",
+  "category",
+  "mill_type",
+  "product_size_range",
+  "inventory_unit_weight",
+  "review"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "description": "Outer heading/grouping the member sits under in the source doc, when the schedule nests members two levels deep (e.g. 'GROUND FLOOR BEAMS' over 'GBM-01', or 'BASEMENT WALL, SHEAR WALLS & STAIRCASE' over 'STAIRCASE'). Leave blank for single-level schedules.",
+   "fieldname": "member_group",
+   "fieldtype": "Data",
+   "label": "Member Group"
+  },
+  {
+   "columns": 2,
+   "fieldname": "member",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "bar_mark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bar Mark"
+  },
+  {
+   "columns": 1,
+   "fieldname": "bar_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bar Size",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_members",
+   "fieldtype": "Int",
+   "label": "No. of Mbrs"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_bars_each",
+   "fieldtype": "Int",
+   "label": "Bars Each"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total No."
+  },
+  {
+   "columns": 1,
+   "fieldname": "length_mm",
+   "fieldtype": "Int",
+   "label": "Length (mm)"
+  },
+  {
+   "fieldname": "length_m",
+   "fieldtype": "Float",
+   "label": "Length (m)"
+  },
+  {
+   "fieldname": "bar_spacing_mm",
+   "fieldtype": "Int",
+   "label": "Spacing (mm)"
+  },
+  {
+   "columns": 1,
+   "fieldname": "shape_code",
+   "fieldtype": "Data",
+   "label": "Shape Code"
+  },
+  {
+   "fieldname": "dim_a_mm",
+   "fieldtype": "Float",
+   "label": "Dim A (mm)"
+  },
+  {
+   "fieldname": "dim_b_mm",
+   "fieldtype": "Float",
+   "label": "Dim B (mm)"
+  },
+  {
+   "fieldname": "dim_c_mm",
+   "fieldtype": "Float",
+   "label": "Dim C (mm)"
+  },
+  {
+   "fieldname": "dim_d_mm",
+   "fieldtype": "Float",
+   "label": "Dim D (mm)"
+  },
+  {
+   "fieldname": "dim_e_r_mm",
+   "fieldtype": "Float",
+   "label": "Dim E/R (mm)"
+  },
+  {
+   "columns": 1,
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight (kg)"
+  },
+  {
+   "description": "Whether weight_kg was printed on the source document or computed from the standard kg/m table because the source had no weight column (common in BS 4466 schedules).",
+   "fieldname": "weight_source",
+   "fieldtype": "Select",
+   "label": "Weight Source",
+   "options": "Printed\nComputed"
+  },
+  {
+   "fieldname": "mapped_product_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mapped Product Name",
+   "options": "Item"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "mapped_product_name.item_code",
+   "fieldname": "mapped_product_code",
+   "fieldtype": "Data",
+   "label": "Mapped Product Code"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fieldname": "mill_type",
+   "fieldtype": "Data",
+   "label": "Mill Type"
+  },
+  {
+   "fieldname": "product_size_range",
+   "fieldtype": "Data",
+   "label": "Product Size Range"
+  },
+  {
+   "fieldname": "inventory_unit_weight",
+   "fieldtype": "Float",
+   "label": "Inventory Unit Weight"
+  },
+  {
+   "fieldname": "review",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Clarify/Review"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-24 15:48:55.128728",
+ "modified_by": "Administrator",
+ "module": "Bbs Extractor",
+ "name": "BBS Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
