@@ -4,7 +4,7 @@
 frappe.ui.form.on("BBS Schedule", {
 	refresh(frm) {
 		if (frm.doc.name && !frm.is_new()) {
-			frm.add_custom_button(__("Get Excel"), () => {
+			frm.add_custom_button(__("Generate Excel"), () => {
 				// GET download via the browser (session cookie handles auth) —
 				// avoids buffering the binary xlsx through frappe.call/JSON.
 				window.open(
