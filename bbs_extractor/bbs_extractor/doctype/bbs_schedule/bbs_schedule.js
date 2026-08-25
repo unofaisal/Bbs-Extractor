@@ -20,7 +20,7 @@ frappe.ui.form.on("BBS Schedule", {
 
 			if (items_needing_review.length) {
 				frm.add_custom_button(
-					__("Draft with AI"),
+					__("Draft email"),
 					() => draft_clarification_email(frm),
 					__("Clarification Email")
 				);
